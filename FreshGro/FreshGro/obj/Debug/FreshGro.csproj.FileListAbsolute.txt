@@ -25,3 +25,6 @@ D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.Buni
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.xml
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminForm.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
