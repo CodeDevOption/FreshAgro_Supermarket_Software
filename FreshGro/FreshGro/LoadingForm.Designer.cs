@@ -33,8 +33,8 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.bunifuProgressBar1 = new Bunifu.UI.WinForms.BunifuProgressBar();
+            this.percentage = new System.Windows.Forms.Label();
+            this.LoadingProgressBar = new Bunifu.UI.WinForms.BunifuProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,43 +72,43 @@
     "ping track of your pantry items.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // percentage
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(90)))));
-            this.label2.Location = new System.Drawing.Point(211, 229);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 33);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "82%";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.percentage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.percentage.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.percentage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(111)))), ((int)(((byte)(90)))));
+            this.percentage.Location = new System.Drawing.Point(211, 229);
+            this.percentage.Name = "percentage";
+            this.percentage.Size = new System.Drawing.Size(52, 33);
+            this.percentage.TabIndex = 1;
+            this.percentage.Text = "0%";
+            this.percentage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuProgressBar1
+            // LoadingProgressBar
             // 
-            this.bunifuProgressBar1.AllowAnimations = false;
-            this.bunifuProgressBar1.Animation = 0;
-            this.bunifuProgressBar1.AnimationSpeed = 220;
-            this.bunifuProgressBar1.AnimationStep = 10;
-            this.bunifuProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuProgressBar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuProgressBar1.BackgroundImage")));
-            this.bunifuProgressBar1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuProgressBar1.BorderRadius = 1;
-            this.bunifuProgressBar1.BorderThickness = 1;
-            this.bunifuProgressBar1.Location = new System.Drawing.Point(-2, 266);
-            this.bunifuProgressBar1.Maximum = 100;
-            this.bunifuProgressBar1.MaximumValue = 100;
-            this.bunifuProgressBar1.Minimum = 0;
-            this.bunifuProgressBar1.MinimumValue = 0;
-            this.bunifuProgressBar1.Name = "bunifuProgressBar1";
-            this.bunifuProgressBar1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            this.bunifuProgressBar1.ProgressBackColor = System.Drawing.Color.Transparent;
-            this.bunifuProgressBar1.ProgressColorLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(118)))));
-            this.bunifuProgressBar1.ProgressColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(118)))));
-            this.bunifuProgressBar1.Size = new System.Drawing.Size(468, 13);
-            this.bunifuProgressBar1.TabIndex = 2;
-            this.bunifuProgressBar1.Value = 82;
-            this.bunifuProgressBar1.ValueByTransition = 82;
+            this.LoadingProgressBar.AllowAnimations = false;
+            this.LoadingProgressBar.Animation = 0;
+            this.LoadingProgressBar.AnimationSpeed = 220;
+            this.LoadingProgressBar.AnimationStep = 10;
+            this.LoadingProgressBar.BackColor = System.Drawing.Color.Transparent;
+            this.LoadingProgressBar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoadingProgressBar.BackgroundImage")));
+            this.LoadingProgressBar.BorderColor = System.Drawing.Color.Transparent;
+            this.LoadingProgressBar.BorderRadius = 1;
+            this.LoadingProgressBar.BorderThickness = 1;
+            this.LoadingProgressBar.Location = new System.Drawing.Point(-2, 266);
+            this.LoadingProgressBar.Maximum = 100;
+            this.LoadingProgressBar.MaximumValue = 100;
+            this.LoadingProgressBar.Minimum = 0;
+            this.LoadingProgressBar.MinimumValue = 0;
+            this.LoadingProgressBar.Name = "LoadingProgressBar";
+            this.LoadingProgressBar.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.LoadingProgressBar.ProgressBackColor = System.Drawing.Color.Transparent;
+            this.LoadingProgressBar.ProgressColorLeft = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(118)))));
+            this.LoadingProgressBar.ProgressColorRight = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(118)))));
+            this.LoadingProgressBar.Size = new System.Drawing.Size(475, 13);
+            this.LoadingProgressBar.TabIndex = 2;
+            this.LoadingProgressBar.Value = 0;
+            this.LoadingProgressBar.ValueByTransition = 0;
             // 
             // LoadingForm
             // 
@@ -117,14 +117,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(214)))), ((int)(((byte)(159)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(469, 278);
-            this.Controls.Add(this.bunifuProgressBar1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.LoadingProgressBar);
+            this.Controls.Add(this.percentage);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bunifuPictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoadingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "LoadingForm";
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -134,8 +134,8 @@
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
-        private Bunifu.UI.WinForms.BunifuProgressBar bunifuProgressBar1;
-        private System.Windows.Forms.Label label2;
+        private Bunifu.UI.WinForms.BunifuProgressBar LoadingProgressBar;
+        private System.Windows.Forms.Label percentage;
         private System.Windows.Forms.Label label1;
     }
 }

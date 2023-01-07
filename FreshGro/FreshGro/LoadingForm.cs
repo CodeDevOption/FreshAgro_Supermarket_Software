@@ -15,6 +15,23 @@ namespace FreshGro
         public LoadingForm()
         {
             InitializeComponent();
+            Delay();
+           
+        }
+
+        async public void Delay() {
+
+            LoginForm logform = new LoginForm();
+            for (int i = 2; i <= 100; i++)
+            {
+
+                percentage.Text = i.ToString() + "%";
+                LoadingProgressBar.Value = i;
+                await Task.Delay(900 / i);
+
+            };
+            this.Hide();
+            logform.Show();
         }
     }
 }
