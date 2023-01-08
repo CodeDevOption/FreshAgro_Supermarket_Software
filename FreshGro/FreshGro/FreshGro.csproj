@@ -42,6 +42,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
       <HintPath>C:\Users\CodeDevOption\Desktop\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>C:\Users\CodeDevOption\Desktop\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
       <HintPath>C:\Users\CodeDevOption\Desktop\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
     </Reference>
@@ -60,9 +63,13 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuTextBox">
       <HintPath>C:\Users\CodeDevOption\Desktop\Bunifu UI WinForms 5.0.3\ui.winforms.5.0.3\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
     </Reference>
+    <Reference Include="Siticone.UI">
+      <HintPath>C:\Users\CodeDevOption\Desktop\Siticone.UI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,11 +80,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminCashiers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminCashiers.Designer.cs">
+      <DependentUpon>AdminCashiers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCategories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminCategories.Designer.cs">
+      <DependentUpon>AdminCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCustomers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminCustomers.Designer.cs">
+      <DependentUpon>AdminCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminHome.Designer.cs">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminItems.Designer.cs">
+      <DependentUpon>AdminItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminRecords.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminRecords.Designer.cs">
+      <DependentUpon>AdminRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierForm.Designer.cs">
+      <DependentUpon>CashierForm.cs</DependentUpon>
     </Compile>
     <Compile Include="LoadingForm.cs">
       <SubType>Form</SubType>
@@ -93,8 +142,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminCashiers.resx">
+      <DependentUpon>AdminCashiers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCategories.resx">
+      <DependentUpon>AdminCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCustomers.resx">
+      <DependentUpon>AdminCustomers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminHome.resx">
+      <DependentUpon>AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminItems.resx">
+      <DependentUpon>AdminItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminRecords.resx">
+      <DependentUpon>AdminRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierForm.resx">
+      <DependentUpon>CashierForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>

@@ -1,7 +1,6 @@
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\FreshGro.exe.config
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\FreshGro.exe
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\FreshGro.pdb
-D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.csprojResolveAssemblyReference.cache
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.Properties.Resources.resources
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.csproj.GenerateResource.Cache
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.exe
@@ -28,3 +27,14 @@ D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.Buni
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminForm.resources
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Siticone.UI.dll
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.CashierForm.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminHome.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminCashiers.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminCategories.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminCustomers.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminItems.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminRecords.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.csprojResolveAssemblyReference.cache

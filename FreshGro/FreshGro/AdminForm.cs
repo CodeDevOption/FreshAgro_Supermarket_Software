@@ -27,5 +27,49 @@ namespace FreshGro
             this.Close();
         }
 
+        private void adminHomeBtn_Cheanged(object sender, EventArgs e)
+        {
+            if (adminHomeBtn.Checked) { adminHome1.BringToFront(); headerTitle.Text = "Home"; }
+        }
+
+        private void adminCategoryBtn_Changed(object sender, EventArgs e)
+        {
+            if (adminCategoryBtn.Checked) { adminCategories1.BringToFront(); headerTitle.Text = "Categories"; }
+
+        }
+
+        private void AdminItemBtn_Changed(object sender, EventArgs e)
+        {
+            if (AdminItemBtn.Checked) { adminItems1.BringToFront(); headerTitle.Text = "Items"; }
+        }
+
+        private void adminCutomersBtn_Changed(object sender, EventArgs e)
+        {
+            if (adminCutomersBtn.Checked) { adminCustomers1.BringToFront(); headerTitle.Text = "Customers"; }
+        }
+
+        private void adminRecordsBtn_Changed(object sender, EventArgs e)
+        {
+            if (adminRecordsBtn.Checked) { adminRecords1.BringToFront(); headerTitle.Text = "Records"; }
+        }
+
+        private void adminCashiersBtn_Changed(object sender, EventArgs e)
+        {
+            if (adminCashiersBtn.Checked) { adminCashiers1.BringToFront(); headerTitle.Text = "Cashiers"; }
+        }
+
+        private void AdminForm_Shown(object sender, EventArgs e)
+        {
+            
+        }
+
+
+
+
+
+
+
+
+
     }
 }
