@@ -63,6 +63,15 @@ namespace FreshGro
             
         }
 
+        private void siticoneCircleButton2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Settings stn = new Settings();
+            stn.Show();
+        }
+
+
+
 
 
 

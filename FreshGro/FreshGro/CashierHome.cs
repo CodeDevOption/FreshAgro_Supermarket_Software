@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace FreshGro
 {
-    public partial class AdminRecords : UserControl
+    public partial class CashierHome : UserControl
     {
-        public AdminRecords()
+        public CashierHome()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -32,7 +32,6 @@ D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.CashierForm.re
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminHome.resources
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminCashiers.resources
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminCategories.resources
-D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminCustomers.resources
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminItems.resources
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.AdminRecords.resources
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
@@ -40,3 +39,8 @@ D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.Buni
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.csprojResolveAssemblyReference.cache
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
 D:\Projects\C#\Final_Project\FreshGro\FreshGro\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.Settings.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.Customers.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.CashierHome.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.ItemCard.resources
+D:\Projects\C#\Final_Project\FreshGro\FreshGro\obj\Debug\FreshGro.RegisterSale.resources

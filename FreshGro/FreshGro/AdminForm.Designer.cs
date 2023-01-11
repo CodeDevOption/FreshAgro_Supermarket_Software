@@ -54,7 +54,7 @@
             this.adminHome1 = new FreshGro.AdminHome();
             this.adminCashiers1 = new FreshGro.AdminCashiers();
             this.adminRecords1 = new FreshGro.AdminRecords();
-            this.adminCustomers1 = new FreshGro.AdminCustomers();
+            this.adminCustomers1 = new FreshGro.Customers();
             this.adminItems1 = new FreshGro.AdminItems();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
@@ -108,6 +108,7 @@
             this.siticoneCircleButton2.ShadowDecoration.Parent = this.siticoneCircleButton2;
             this.siticoneCircleButton2.Size = new System.Drawing.Size(50, 50);
             this.siticoneCircleButton2.TabIndex = 6;
+            this.siticoneCircleButton2.Click += new System.EventHandler(this.siticoneCircleButton2_Click);
             // 
             // siticoneCircleButton1
             // 
@@ -505,7 +506,7 @@
         private AdminHome adminHome1;
         private AdminCashiers adminCashiers1;
         private AdminRecords adminRecords1;
-        private AdminCustomers adminCustomers1;
+        private Customers adminCustomers1;
         private AdminItems adminItems1;
         private AdminCategories adminCategories1;
     }
