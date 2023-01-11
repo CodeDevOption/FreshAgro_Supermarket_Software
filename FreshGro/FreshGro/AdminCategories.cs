@@ -16,17 +16,10 @@ namespace FreshGro
         {
             InitializeComponent();
             siticoneDataGridView1.AllowUserToAddRows = false;
-            siticoneDataGridView1.Rows.Add(
-                
-                new object[]{
-                1234,
-                null,
-                "Apple",
-                "New Apples",
-                }
-                
-                );
-                }
+            
+                    
+        }
+
 
         private void siticoneMaterialTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -35,7 +28,26 @@ namespace FreshGro
 
         private void AdminCategories_Load(object sender, EventArgs e)
         {
+            siticoneDataGridView1.Rows.Add(
 
+                new object[]{
+                1234,
+                      null ,
+                "Apple",
+                "New Apples",
+                }
+
+                );
+            siticoneDataGridView1.Rows.Add(
+
+            new object[]{
+                1234,
+                null,
+                "Apple",
+                "New Apples",
+                }
+
+                );
         }
     }
 }
