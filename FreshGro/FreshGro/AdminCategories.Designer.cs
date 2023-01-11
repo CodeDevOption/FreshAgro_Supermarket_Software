@@ -53,10 +53,6 @@
             this.siticoneButton2 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton3 = new Siticone.UI.WinForms.SiticoneButton();
             this.siticoneButton4 = new Siticone.UI.WinForms.SiticoneButton();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.image = new System.Windows.Forms.DataGridViewImageColumn();
-            this.categoryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.siticoneDataGridView1 = new Siticone.UI.WinForms.SiticoneDataGridView();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.siticoneButton5 = new Siticone.UI.WinForms.SiticoneButton();
@@ -318,33 +314,9 @@
             this.siticoneButton4.TabIndex = 10;
             this.siticoneButton4.Text = "Delete";
             // 
-            // description
-            // 
-            this.description.HeaderText = "Description";
-            this.description.Name = "description";
-            // 
-            // categoryName
-            // 
-            this.categoryName.HeaderText = "Category Name";
-            this.categoryName.Name = "categoryName";
-            // 
-            // image
-            // 
-            this.image.HeaderText = "Image";
-            this.image.Name = "image";
-            this.image.ReadOnly = true;
-            this.image.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // categoryId
-            // 
-            this.categoryId.HeaderText = "Category Id";
-            this.categoryId.Name = "categoryId";
-            this.categoryId.ReadOnly = true;
-            // 
             // siticoneDataGridView1
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(185)))), ((int)(((byte)(226)))), ((int)(((byte)(218)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Empty;
             this.siticoneDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.siticoneDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.siticoneDataGridView1.BackgroundColor = System.Drawing.Color.White;
@@ -360,11 +332,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.siticoneDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.siticoneDataGridView1.ColumnHeadersHeight = 30;
-            this.siticoneDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.categoryId,
-            this.image,
-            this.categoryName,
-            this.description});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(230)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -517,7 +484,6 @@
             this.Controls.Add(this.username);
             this.Name = "AdminCategories";
             this.Size = new System.Drawing.Size(1040, 628);
-            this.Load += new System.EventHandler(this.AdminCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.siticoneDataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -536,10 +502,6 @@
         private Siticone.UI.WinForms.SiticoneButton siticoneButton2;
         private Siticone.UI.WinForms.SiticoneButton siticoneButton3;
         private Siticone.UI.WinForms.SiticoneButton siticoneButton4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryName;
-        private System.Windows.Forms.DataGridViewImageColumn image;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categoryId;
         private Siticone.UI.WinForms.SiticoneDataGridView siticoneDataGridView1;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
         private Siticone.UI.WinForms.SiticoneButton siticoneButton5;

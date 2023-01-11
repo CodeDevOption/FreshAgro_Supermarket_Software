@@ -93,6 +93,7 @@
             this.siticoneCircleButton1.ShadowDecoration.Parent = this.siticoneCircleButton1;
             this.siticoneCircleButton1.Size = new System.Drawing.Size(50, 50);
             this.siticoneCircleButton1.TabIndex = 6;
+            this.siticoneCircleButton1.Click += new System.EventHandler(this.siticoneCircleButton1_Click);
             // 
             // registerSaleBtn
             // 

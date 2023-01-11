@@ -23,5 +23,10 @@ namespace FreshGro
             AdminForm admf = new AdminForm();
             admf.Show();
         }
+
+        private void Settings_Load(object sender, EventArgs e)
+        {
+            username.Text = Program.User;
+        }
     }
 }

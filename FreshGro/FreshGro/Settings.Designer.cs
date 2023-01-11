@@ -665,9 +665,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(120)))), ((int)(((byte)(105)))));
             this.label3.Location = new System.Drawing.Point(668, 295);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 14);
+            this.label3.Size = new System.Drawing.Size(60, 14);
             this.label3.TabIndex = 62;
-            this.label3.Text = "Cashier Name";
+            this.label3.Text = "Full Name";
             // 
             // username
             // 
@@ -896,6 +896,7 @@
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
+            this.Load += new System.EventHandler(this.Settings_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
             this.ResumeLayout(false);

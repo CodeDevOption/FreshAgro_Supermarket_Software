@@ -8,6 +8,7 @@ namespace FreshGro
 {
     static class Program
     {
+        public static string User;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +17,7 @@ namespace FreshGro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CashierForm());
+            Application.Run(new LoginForm());
         }
     }
 }

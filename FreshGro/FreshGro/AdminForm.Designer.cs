@@ -50,12 +50,12 @@
             this.profileName = new System.Windows.Forms.Label();
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.adminCategories1 = new FreshGro.AdminCategories();
             this.adminHome1 = new FreshGro.AdminHome();
             this.adminCashiers1 = new FreshGro.AdminCashiers();
             this.adminRecords1 = new FreshGro.AdminRecords();
             this.adminCustomers1 = new FreshGro.Customers();
             this.adminItems1 = new FreshGro.AdminItems();
+            this.adminCategories1 = new FreshGro.AdminCategories();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -128,6 +128,7 @@
             this.siticoneCircleButton1.ShadowDecoration.Parent = this.siticoneCircleButton1;
             this.siticoneCircleButton1.Size = new System.Drawing.Size(50, 50);
             this.siticoneCircleButton1.TabIndex = 6;
+            this.siticoneCircleButton1.Click += new System.EventHandler(this.siticoneCircleButton1_Click);
             // 
             // adminCashiersBtn
             // 
@@ -395,24 +396,16 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.adminCategories1);
             this.panel3.Controls.Add(this.adminHome1);
             this.panel3.Controls.Add(this.adminCashiers1);
             this.panel3.Controls.Add(this.adminRecords1);
             this.panel3.Controls.Add(this.adminCustomers1);
             this.panel3.Controls.Add(this.adminItems1);
+            this.panel3.Controls.Add(this.adminCategories1);
             this.panel3.Location = new System.Drawing.Point(232, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1040, 628);
             this.panel3.TabIndex = 2;
-            // 
-            // adminCategories1
-            // 
-            this.adminCategories1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminCategories1.Location = new System.Drawing.Point(0, 0);
-            this.adminCategories1.Name = "adminCategories1";
-            this.adminCategories1.Size = new System.Drawing.Size(1040, 628);
-            this.adminCategories1.TabIndex = 1;
             // 
             // adminHome1
             // 
@@ -453,6 +446,14 @@
             this.adminItems1.Name = "adminItems1";
             this.adminItems1.Size = new System.Drawing.Size(1040, 628);
             this.adminItems1.TabIndex = 2;
+            // 
+            // adminCategories1
+            // 
+            this.adminCategories1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminCategories1.Location = new System.Drawing.Point(0, 0);
+            this.adminCategories1.Name = "adminCategories1";
+            this.adminCategories1.Size = new System.Drawing.Size(1040, 628);
+            this.adminCategories1.TabIndex = 1;
             // 
             // AdminForm
             // 

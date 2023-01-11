@@ -47,6 +47,13 @@ namespace FreshGro
             WindowState = FormWindowState.Minimized;
         }
 
+        private void siticoneCircleButton1_Click(object sender, EventArgs e)
+        {
+            LoginForm logf = new LoginForm();
+            this.Hide();
+            logf.Show();
+        }
+
 
 
     }
