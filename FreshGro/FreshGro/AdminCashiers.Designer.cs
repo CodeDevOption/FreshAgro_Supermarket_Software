@@ -75,7 +75,7 @@
             this.cashierProImg = new Siticone.UI.WinForms.SiticonePictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cashName = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.cashSearch = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -208,6 +208,7 @@
             this.cashDataGrid.ThemeStyle.RowsStyle.Height = 75;
             this.cashDataGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(191)))), ((int)(((byte)(173)))));
             this.cashDataGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(219)))), ((int)(((byte)(219)))));
+            this.cashDataGrid.Click += new System.EventHandler(this.cashDataGrid_Click);
             // 
             // siticoneButton4
             // 
@@ -226,6 +227,7 @@
             this.siticoneButton4.Size = new System.Drawing.Size(110, 40);
             this.siticoneButton4.TabIndex = 40;
             this.siticoneButton4.Text = "Delete";
+            this.siticoneButton4.Click += new System.EventHandler(this.siticoneButton4_Click);
             // 
             // siticoneButton3
             // 
@@ -244,6 +246,7 @@
             this.siticoneButton3.Size = new System.Drawing.Size(110, 40);
             this.siticoneButton3.TabIndex = 41;
             this.siticoneButton3.Text = "Update";
+            this.siticoneButton3.Click += new System.EventHandler(this.siticoneButton3_Click);
             // 
             // siticoneButton2
             // 
@@ -262,6 +265,7 @@
             this.siticoneButton2.ShadowDecoration.Parent = this.siticoneButton2;
             this.siticoneButton2.Size = new System.Drawing.Size(37, 37);
             this.siticoneButton2.TabIndex = 42;
+            this.siticoneButton2.Click += new System.EventHandler(this.siticoneButton2_Click);
             // 
             // siticoneButton1
             // 
@@ -379,80 +383,80 @@
             this.cashName.UseSystemPasswordChar = false;
             this.cashName.WordWrap = true;
             // 
-            // bunifuTextBox2
+            // cashSearch
             // 
-            this.bunifuTextBox2.AcceptsReturn = false;
-            this.bunifuTextBox2.AcceptsTab = false;
-            this.bunifuTextBox2.AnimationSpeed = 200;
-            this.bunifuTextBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bunifuTextBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bunifuTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuTextBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextBox2.BackgroundImage")));
-            this.bunifuTextBox2.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(204)))), ((int)(((byte)(119)))));
-            this.bunifuTextBox2.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuTextBox2.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(204)))), ((int)(((byte)(119)))));
-            this.bunifuTextBox2.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox2.BorderRadius = 10;
-            this.bunifuTextBox2.BorderThickness = 1;
-            this.bunifuTextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.bunifuTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox2.DefaultFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuTextBox2.DefaultText = "";
-            this.bunifuTextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
-            this.bunifuTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(120)))), ((int)(((byte)(105)))));
-            this.bunifuTextBox2.HideSelection = true;
-            this.bunifuTextBox2.IconLeft = null;
-            this.bunifuTextBox2.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox2.IconPadding = 10;
-            this.bunifuTextBox2.IconRight = null;
-            this.bunifuTextBox2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuTextBox2.Lines = new string[0];
-            this.bunifuTextBox2.Location = new System.Drawing.Point(659, 291);
-            this.bunifuTextBox2.MaxLength = 32767;
-            this.bunifuTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.bunifuTextBox2.Modified = false;
-            this.bunifuTextBox2.Multiline = false;
-            this.bunifuTextBox2.Name = "bunifuTextBox2";
+            this.cashSearch.AcceptsReturn = false;
+            this.cashSearch.AcceptsTab = false;
+            this.cashSearch.AnimationSpeed = 200;
+            this.cashSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.cashSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.cashSearch.BackColor = System.Drawing.Color.Transparent;
+            this.cashSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("cashSearch.BackgroundImage")));
+            this.cashSearch.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(204)))), ((int)(((byte)(119)))));
+            this.cashSearch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cashSearch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(204)))), ((int)(((byte)(119)))));
+            this.cashSearch.BorderColorIdle = System.Drawing.Color.Silver;
+            this.cashSearch.BorderRadius = 10;
+            this.cashSearch.BorderThickness = 1;
+            this.cashSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.cashSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.cashSearch.DefaultFont = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cashSearch.DefaultText = "";
+            this.cashSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
+            this.cashSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(120)))), ((int)(((byte)(105)))));
+            this.cashSearch.HideSelection = true;
+            this.cashSearch.IconLeft = null;
+            this.cashSearch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.cashSearch.IconPadding = 10;
+            this.cashSearch.IconRight = null;
+            this.cashSearch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.cashSearch.Lines = new string[0];
+            this.cashSearch.Location = new System.Drawing.Point(659, 291);
+            this.cashSearch.MaxLength = 32767;
+            this.cashSearch.MinimumSize = new System.Drawing.Size(1, 1);
+            this.cashSearch.Modified = false;
+            this.cashSearch.Multiline = false;
+            this.cashSearch.Name = "cashSearch";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(204)))), ((int)(((byte)(119)))));
             stateProperties5.FillColor = System.Drawing.Color.Empty;
             stateProperties5.ForeColor = System.Drawing.Color.Empty;
             stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnActiveState = stateProperties5;
+            this.cashSearch.OnActiveState = stateProperties5;
             stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.bunifuTextBox2.OnDisabledState = stateProperties6;
+            this.cashSearch.OnDisabledState = stateProperties6;
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(204)))), ((int)(((byte)(119)))));
             stateProperties7.FillColor = System.Drawing.Color.Empty;
             stateProperties7.ForeColor = System.Drawing.Color.Empty;
             stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnHoverState = stateProperties7;
+            this.cashSearch.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(255)))), ((int)(((byte)(226)))));
             stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(120)))), ((int)(((byte)(105)))));
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.bunifuTextBox2.OnIdleState = stateProperties8;
-            this.bunifuTextBox2.Padding = new System.Windows.Forms.Padding(3);
-            this.bunifuTextBox2.PasswordChar = '\0';
-            this.bunifuTextBox2.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(120)))), ((int)(((byte)(105)))));
-            this.bunifuTextBox2.PlaceholderText = "Search";
-            this.bunifuTextBox2.ReadOnly = false;
-            this.bunifuTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.bunifuTextBox2.SelectedText = "";
-            this.bunifuTextBox2.SelectionLength = 0;
-            this.bunifuTextBox2.SelectionStart = 0;
-            this.bunifuTextBox2.ShortcutsEnabled = false;
-            this.bunifuTextBox2.Size = new System.Drawing.Size(249, 37);
-            this.bunifuTextBox2.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.bunifuTextBox2.TabIndex = 32;
-            this.bunifuTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bunifuTextBox2.TextMarginBottom = 0;
-            this.bunifuTextBox2.TextMarginLeft = 3;
-            this.bunifuTextBox2.TextMarginTop = 0;
-            this.bunifuTextBox2.TextPlaceholder = "Search";
-            this.bunifuTextBox2.UseSystemPasswordChar = false;
-            this.bunifuTextBox2.WordWrap = true;
+            this.cashSearch.OnIdleState = stateProperties8;
+            this.cashSearch.Padding = new System.Windows.Forms.Padding(3);
+            this.cashSearch.PasswordChar = '\0';
+            this.cashSearch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(120)))), ((int)(((byte)(105)))));
+            this.cashSearch.PlaceholderText = "Search";
+            this.cashSearch.ReadOnly = false;
+            this.cashSearch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.cashSearch.SelectedText = "";
+            this.cashSearch.SelectionLength = 0;
+            this.cashSearch.SelectionStart = 0;
+            this.cashSearch.ShortcutsEnabled = false;
+            this.cashSearch.Size = new System.Drawing.Size(249, 37);
+            this.cashSearch.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.cashSearch.TabIndex = 32;
+            this.cashSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.cashSearch.TextMarginBottom = 0;
+            this.cashSearch.TextMarginLeft = 3;
+            this.cashSearch.TextMarginTop = 0;
+            this.cashSearch.TextPlaceholder = "Search";
+            this.cashSearch.UseSystemPasswordChar = false;
+            this.cashSearch.WordWrap = true;
             // 
             // label4
             // 
@@ -1020,7 +1024,7 @@
             this.Controls.Add(this.cashierProImg);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cashName);
-            this.Controls.Add(this.bunifuTextBox2);
+            this.Controls.Add(this.cashSearch);
             this.Name = "AdminCashiers";
             this.Size = new System.Drawing.Size(1040, 628);
             this.Load += new System.EventHandler(this.AdminCashiers_Load);
@@ -1044,7 +1048,7 @@
         private Siticone.UI.WinForms.SiticonePictureBox cashierProImg;
         private System.Windows.Forms.Label label3;
         private Bunifu.UI.WinForms.BunifuTextBox cashName;
-        private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
+        private Bunifu.UI.WinForms.BunifuTextBox cashSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -48,7 +48,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.headerTitle = new System.Windows.Forms.Label();
             this.profileName = new System.Windows.Forms.Label();
-            this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.AdminProImg = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.adminHome1 = new FreshGro.AdminHome();
             this.adminCashiers1 = new FreshGro.AdminCashiers();
@@ -61,7 +61,7 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminProImg)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -324,7 +324,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.headerTitle);
             this.panel2.Controls.Add(this.profileName);
-            this.panel2.Controls.Add(this.bunifuPictureBox2);
+            this.panel2.Controls.Add(this.AdminProImg);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(232, 0);
             this.panel2.Name = "panel2";
@@ -371,25 +371,23 @@
             this.profileName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(95)))));
             this.profileName.Location = new System.Drawing.Point(84, 31);
             this.profileName.Name = "profileName";
-            this.profileName.Size = new System.Drawing.Size(88, 13);
+            this.profileName.Size = new System.Drawing.Size(0, 13);
             this.profileName.TabIndex = 1;
-            this.profileName.Text = "Lahiru (Admin)";
             // 
-            // bunifuPictureBox2
+            // AdminProImg
             // 
-            this.bunifuPictureBox2.AllowFocused = false;
-            this.bunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuPictureBox2.AutoSizeHeight = true;
-            this.bunifuPictureBox2.BorderRadius = 25;
-            this.bunifuPictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox2.Image")));
-            this.bunifuPictureBox2.IsCircle = true;
-            this.bunifuPictureBox2.Location = new System.Drawing.Point(21, 12);
-            this.bunifuPictureBox2.Name = "bunifuPictureBox2";
-            this.bunifuPictureBox2.Size = new System.Drawing.Size(51, 51);
-            this.bunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuPictureBox2.TabIndex = 0;
-            this.bunifuPictureBox2.TabStop = false;
-            this.bunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            this.AdminProImg.AllowFocused = false;
+            this.AdminProImg.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AdminProImg.AutoSizeHeight = true;
+            this.AdminProImg.BorderRadius = 25;
+            this.AdminProImg.IsCircle = true;
+            this.AdminProImg.Location = new System.Drawing.Point(21, 12);
+            this.AdminProImg.Name = "AdminProImg";
+            this.AdminProImg.Size = new System.Drawing.Size(51, 51);
+            this.AdminProImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.AdminProImg.TabIndex = 0;
+            this.AdminProImg.TabStop = false;
+            this.AdminProImg.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // panel3
             // 
@@ -468,6 +466,7 @@
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
+            this.Load += new System.EventHandler(this.AdminForm_Load);
             this.Shown += new System.EventHandler(this.AdminForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -476,7 +475,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AdminProImg)).EndInit();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -494,7 +493,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label headerTitle;
         private System.Windows.Forms.Label profileName;
-        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox2;
+        private Bunifu.UI.WinForms.BunifuPictureBox AdminProImg;
         private Siticone.UI.WinForms.SiticoneButton adminHomeBtn;
         private Siticone.UI.WinForms.SiticoneCircleButton siticoneCircleButton2;
         private Siticone.UI.WinForms.SiticoneCircleButton siticoneCircleButton1;

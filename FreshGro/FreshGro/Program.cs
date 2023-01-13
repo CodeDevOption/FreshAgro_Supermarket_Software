@@ -17,7 +17,7 @@ namespace FreshGro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new AdminForm());
         }
     }
 }
