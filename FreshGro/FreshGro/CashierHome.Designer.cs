@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierHome));
             this.siticonePanel3 = new Siticone.UI.WinForms.SiticonePanel();
             this.siticonePictureBox3 = new Siticone.UI.WinForms.SiticonePictureBox();
-            this.siticoneLabel5 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.totItems = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel6 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticonePanel2 = new Siticone.UI.WinForms.SiticonePanel();
             this.siticonePictureBox2 = new Siticone.UI.WinForms.SiticonePictureBox();
-            this.siticoneLabel3 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.totcus = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel4 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticonePanel1 = new Siticone.UI.WinForms.SiticonePanel();
             this.siticonePictureBox1 = new Siticone.UI.WinForms.SiticonePictureBox();
-            this.siticoneLabel2 = new Siticone.UI.WinForms.SiticoneLabel();
+            this.totSels = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticoneLabel1 = new Siticone.UI.WinForms.SiticoneLabel();
             this.siticonePanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox3)).BeginInit();
@@ -53,7 +53,7 @@
             // 
             this.siticonePanel3.BorderRadius = 10;
             this.siticonePanel3.Controls.Add(this.siticonePictureBox3);
-            this.siticonePanel3.Controls.Add(this.siticoneLabel5);
+            this.siticonePanel3.Controls.Add(this.totItems);
             this.siticonePanel3.Controls.Add(this.siticoneLabel6);
             this.siticonePanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.siticonePanel3.Location = new System.Drawing.Point(367, 145);
@@ -74,16 +74,16 @@
             this.siticonePictureBox3.TabIndex = 1;
             this.siticonePictureBox3.TabStop = false;
             // 
-            // siticoneLabel5
+            // totItems
             // 
-            this.siticoneLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
-            this.siticoneLabel5.Location = new System.Drawing.Point(119, 83);
-            this.siticoneLabel5.Name = "siticoneLabel5";
-            this.siticoneLabel5.Size = new System.Drawing.Size(18, 34);
-            this.siticoneLabel5.TabIndex = 0;
-            this.siticoneLabel5.Text = "0";
+            this.totItems.BackColor = System.Drawing.Color.Transparent;
+            this.totItems.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totItems.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.totItems.Location = new System.Drawing.Point(119, 83);
+            this.totItems.Name = "totItems";
+            this.totItems.Size = new System.Drawing.Size(18, 34);
+            this.totItems.TabIndex = 0;
+            this.totItems.Text = "0";
             // 
             // siticoneLabel6
             // 
@@ -100,7 +100,7 @@
             // 
             this.siticonePanel2.BorderRadius = 10;
             this.siticonePanel2.Controls.Add(this.siticonePictureBox2);
-            this.siticonePanel2.Controls.Add(this.siticoneLabel3);
+            this.siticonePanel2.Controls.Add(this.totcus);
             this.siticonePanel2.Controls.Add(this.siticoneLabel4);
             this.siticonePanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.siticonePanel2.Location = new System.Drawing.Point(690, 145);
@@ -121,16 +121,16 @@
             this.siticonePictureBox2.TabIndex = 1;
             this.siticonePictureBox2.TabStop = false;
             // 
-            // siticoneLabel3
+            // totcus
             // 
-            this.siticoneLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
-            this.siticoneLabel3.Location = new System.Drawing.Point(119, 83);
-            this.siticoneLabel3.Name = "siticoneLabel3";
-            this.siticoneLabel3.Size = new System.Drawing.Size(18, 34);
-            this.siticoneLabel3.TabIndex = 0;
-            this.siticoneLabel3.Text = "0";
+            this.totcus.BackColor = System.Drawing.Color.Transparent;
+            this.totcus.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totcus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.totcus.Location = new System.Drawing.Point(119, 83);
+            this.totcus.Name = "totcus";
+            this.totcus.Size = new System.Drawing.Size(18, 34);
+            this.totcus.TabIndex = 0;
+            this.totcus.Text = "0";
             // 
             // siticoneLabel4
             // 
@@ -147,7 +147,7 @@
             // 
             this.siticonePanel1.BorderRadius = 10;
             this.siticonePanel1.Controls.Add(this.siticonePictureBox1);
-            this.siticonePanel1.Controls.Add(this.siticoneLabel2);
+            this.siticonePanel1.Controls.Add(this.totSels);
             this.siticonePanel1.Controls.Add(this.siticoneLabel1);
             this.siticonePanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.siticonePanel1.Location = new System.Drawing.Point(44, 145);
@@ -168,16 +168,16 @@
             this.siticonePictureBox1.TabIndex = 1;
             this.siticonePictureBox1.TabStop = false;
             // 
-            // siticoneLabel2
+            // totSels
             // 
-            this.siticoneLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneLabel2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siticoneLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
-            this.siticoneLabel2.Location = new System.Drawing.Point(119, 83);
-            this.siticoneLabel2.Name = "siticoneLabel2";
-            this.siticoneLabel2.Size = new System.Drawing.Size(18, 34);
-            this.siticoneLabel2.TabIndex = 0;
-            this.siticoneLabel2.Text = "0";
+            this.totSels.BackColor = System.Drawing.Color.Transparent;
+            this.totSels.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totSels.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.totSels.Location = new System.Drawing.Point(119, 83);
+            this.totSels.Name = "totSels";
+            this.totSels.Size = new System.Drawing.Size(18, 34);
+            this.totSels.TabIndex = 0;
+            this.totSels.Text = "0";
             // 
             // siticoneLabel1
             // 
@@ -199,6 +199,7 @@
             this.Controls.Add(this.siticonePanel1);
             this.Name = "CashierHome";
             this.Size = new System.Drawing.Size(1043, 629);
+            this.Load += new System.EventHandler(this.CashierHome_Load);
             this.siticonePanel3.ResumeLayout(false);
             this.siticonePanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.siticonePictureBox3)).EndInit();
@@ -216,15 +217,15 @@
 
         private Siticone.UI.WinForms.SiticonePanel siticonePanel3;
         private Siticone.UI.WinForms.SiticonePictureBox siticonePictureBox3;
-        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel5;
+        private Siticone.UI.WinForms.SiticoneLabel totItems;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel6;
         private Siticone.UI.WinForms.SiticonePanel siticonePanel2;
         private Siticone.UI.WinForms.SiticonePictureBox siticonePictureBox2;
-        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel3;
+        private Siticone.UI.WinForms.SiticoneLabel totcus;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel4;
         private Siticone.UI.WinForms.SiticonePanel siticonePanel1;
         private Siticone.UI.WinForms.SiticonePictureBox siticonePictureBox1;
-        private Siticone.UI.WinForms.SiticoneLabel siticoneLabel2;
+        private Siticone.UI.WinForms.SiticoneLabel totSels;
         private Siticone.UI.WinForms.SiticoneLabel siticoneLabel1;
     }
 }

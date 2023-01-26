@@ -30,7 +30,7 @@ namespace FreshGro
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void adminHomeBtn_Cheanged(object sender, EventArgs e)
@@ -62,6 +62,11 @@ namespace FreshGro
         private void adminCashiersBtn_Changed(object sender, EventArgs e)
         {
             if (adminCashiersBtn.Checked) { adminCashiers1.BringToFront(); headerTitle.Text = "Cashiers"; }
+        }
+        private void suplierBtn_CheckedChanged(object sender, EventArgs e)
+        {
+            if (suplierBtn.Checked) { adminSupplier1.BringToFront(); headerTitle.Text = "Suppliers"; }
+
         }
 
         private void AdminForm_Shown(object sender, EventArgs e)
@@ -128,6 +133,10 @@ namespace FreshGro
 
 
         }
+
+
+
+
 
 
 

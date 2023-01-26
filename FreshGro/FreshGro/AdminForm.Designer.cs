@@ -37,6 +37,7 @@
             this.adminCashiersBtn = new Siticone.UI.WinForms.SiticoneButton();
             this.adminRecordsBtn = new Siticone.UI.WinForms.SiticoneButton();
             this.adminCutomersBtn = new Siticone.UI.WinForms.SiticoneButton();
+            this.suplierBtn = new Siticone.UI.WinForms.SiticoneButton();
             this.AdminItemBtn = new Siticone.UI.WinForms.SiticoneButton();
             this.adminCategoryBtn = new Siticone.UI.WinForms.SiticoneButton();
             this.adminHomeBtn = new Siticone.UI.WinForms.SiticoneButton();
@@ -56,6 +57,7 @@
             this.adminCustomers1 = new FreshGro.Customers();
             this.adminItems1 = new FreshGro.AdminItems();
             this.adminCategories1 = new FreshGro.AdminCategories();
+            this.adminSupplier1 = new FreshGro.AdminSupplier();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -78,6 +80,7 @@
             this.panel1.Controls.Add(this.adminCashiersBtn);
             this.panel1.Controls.Add(this.adminRecordsBtn);
             this.panel1.Controls.Add(this.adminCutomersBtn);
+            this.panel1.Controls.Add(this.suplierBtn);
             this.panel1.Controls.Add(this.AdminItemBtn);
             this.panel1.Controls.Add(this.adminCategoryBtn);
             this.panel1.Controls.Add(this.adminHomeBtn);
@@ -146,7 +149,7 @@
             this.adminCashiersBtn.Image = ((System.Drawing.Image)(resources.GetObject("adminCashiersBtn.Image")));
             this.adminCashiersBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.adminCashiersBtn.ImageOffset = new System.Drawing.Point(10, 0);
-            this.adminCashiersBtn.Location = new System.Drawing.Point(12, 488);
+            this.adminCashiersBtn.Location = new System.Drawing.Point(12, 519);
             this.adminCashiersBtn.Name = "adminCashiersBtn";
             this.adminCashiersBtn.ShadowDecoration.Parent = this.adminCashiersBtn;
             this.adminCashiersBtn.Size = new System.Drawing.Size(205, 45);
@@ -171,7 +174,7 @@
             this.adminRecordsBtn.Image = ((System.Drawing.Image)(resources.GetObject("adminRecordsBtn.Image")));
             this.adminRecordsBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.adminRecordsBtn.ImageOffset = new System.Drawing.Point(10, 0);
-            this.adminRecordsBtn.Location = new System.Drawing.Point(12, 421);
+            this.adminRecordsBtn.Location = new System.Drawing.Point(12, 458);
             this.adminRecordsBtn.Name = "adminRecordsBtn";
             this.adminRecordsBtn.ShadowDecoration.Parent = this.adminRecordsBtn;
             this.adminRecordsBtn.Size = new System.Drawing.Size(205, 45);
@@ -196,7 +199,7 @@
             this.adminCutomersBtn.Image = ((System.Drawing.Image)(resources.GetObject("adminCutomersBtn.Image")));
             this.adminCutomersBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.adminCutomersBtn.ImageOffset = new System.Drawing.Point(10, 0);
-            this.adminCutomersBtn.Location = new System.Drawing.Point(12, 354);
+            this.adminCutomersBtn.Location = new System.Drawing.Point(12, 397);
             this.adminCutomersBtn.Name = "adminCutomersBtn";
             this.adminCutomersBtn.ShadowDecoration.Parent = this.adminCutomersBtn;
             this.adminCutomersBtn.Size = new System.Drawing.Size(205, 45);
@@ -204,6 +207,31 @@
             this.adminCutomersBtn.Text = "Customers";
             this.adminCutomersBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.adminCutomersBtn.CheckedChanged += new System.EventHandler(this.adminCutomersBtn_Changed);
+            // 
+            // suplierBtn
+            // 
+            this.suplierBtn.BackColor = System.Drawing.Color.Transparent;
+            this.suplierBtn.BorderRadius = 20;
+            this.suplierBtn.ButtonMode = Siticone.UI.WinForms.Enums.ButtonMode.RadioButton;
+            this.suplierBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(165)))), ((int)(((byte)(95)))));
+            this.suplierBtn.CheckedState.Parent = this.suplierBtn;
+            this.suplierBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.suplierBtn.CustomImages.Parent = this.suplierBtn;
+            this.suplierBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(118)))));
+            this.suplierBtn.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold);
+            this.suplierBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(235)))), ((int)(((byte)(226)))));
+            this.suplierBtn.HoveredState.Parent = this.suplierBtn;
+            this.suplierBtn.Image = ((System.Drawing.Image)(resources.GetObject("suplierBtn.Image")));
+            this.suplierBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.suplierBtn.ImageOffset = new System.Drawing.Point(10, 0);
+            this.suplierBtn.Location = new System.Drawing.Point(12, 275);
+            this.suplierBtn.Name = "suplierBtn";
+            this.suplierBtn.ShadowDecoration.Parent = this.suplierBtn;
+            this.suplierBtn.Size = new System.Drawing.Size(205, 45);
+            this.suplierBtn.TabIndex = 5;
+            this.suplierBtn.Text = "Suppliers";
+            this.suplierBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.suplierBtn.CheckedChanged += new System.EventHandler(this.suplierBtn_CheckedChanged);
             // 
             // AdminItemBtn
             // 
@@ -221,7 +249,7 @@
             this.AdminItemBtn.Image = ((System.Drawing.Image)(resources.GetObject("AdminItemBtn.Image")));
             this.AdminItemBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.AdminItemBtn.ImageOffset = new System.Drawing.Point(10, 0);
-            this.AdminItemBtn.Location = new System.Drawing.Point(12, 287);
+            this.AdminItemBtn.Location = new System.Drawing.Point(12, 336);
             this.AdminItemBtn.Name = "AdminItemBtn";
             this.AdminItemBtn.ShadowDecoration.Parent = this.AdminItemBtn;
             this.AdminItemBtn.Size = new System.Drawing.Size(205, 45);
@@ -246,7 +274,7 @@
             this.adminCategoryBtn.Image = ((System.Drawing.Image)(resources.GetObject("adminCategoryBtn.Image")));
             this.adminCategoryBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.adminCategoryBtn.ImageOffset = new System.Drawing.Point(10, 0);
-            this.adminCategoryBtn.Location = new System.Drawing.Point(12, 220);
+            this.adminCategoryBtn.Location = new System.Drawing.Point(12, 214);
             this.adminCategoryBtn.Name = "adminCategoryBtn";
             this.adminCategoryBtn.ShadowDecoration.Parent = this.adminCategoryBtn;
             this.adminCategoryBtn.Size = new System.Drawing.Size(205, 45);
@@ -380,6 +408,7 @@
             this.AdminProImg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AdminProImg.AutoSizeHeight = true;
             this.AdminProImg.BorderRadius = 25;
+            this.AdminProImg.Image = ((System.Drawing.Image)(resources.GetObject("AdminProImg.Image")));
             this.AdminProImg.IsCircle = true;
             this.AdminProImg.Location = new System.Drawing.Point(21, 12);
             this.AdminProImg.Name = "AdminProImg";
@@ -400,6 +429,7 @@
             this.panel3.Controls.Add(this.adminCustomers1);
             this.panel3.Controls.Add(this.adminItems1);
             this.panel3.Controls.Add(this.adminCategories1);
+            this.panel3.Controls.Add(this.adminSupplier1);
             this.panel3.Location = new System.Drawing.Point(232, 74);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1040, 628);
@@ -452,6 +482,14 @@
             this.adminCategories1.Name = "adminCategories1";
             this.adminCategories1.Size = new System.Drawing.Size(1040, 628);
             this.adminCategories1.TabIndex = 1;
+            // 
+            // adminSupplier1
+            // 
+            this.adminSupplier1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminSupplier1.Location = new System.Drawing.Point(0, 0);
+            this.adminSupplier1.Name = "adminSupplier1";
+            this.adminSupplier1.Size = new System.Drawing.Size(1040, 628);
+            this.adminSupplier1.TabIndex = 6;
             // 
             // AdminForm
             // 
@@ -509,5 +547,7 @@
         private Customers adminCustomers1;
         private AdminItems adminItems1;
         private AdminCategories adminCategories1;
+        private Siticone.UI.WinForms.SiticoneButton suplierBtn;
+        private AdminSupplier adminSupplier1;
     }
 }

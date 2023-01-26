@@ -12,6 +12,7 @@ using System.Data.SqlClient;
 
 namespace FreshGro
 {
+
     public partial class AdminCategories : UserControl
     {
         SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-V9SH1LB;Initial Catalog=FreshGro;Integrated Security=True");
@@ -64,6 +65,7 @@ namespace FreshGro
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Data Inserted Successfuly", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     load_data();
+                    AdminItems.instance.LoadData();
                     clearForm();
                     con.Close();
                 }
@@ -107,15 +109,32 @@ namespace FreshGro
                 try
                 {
 
-                    cmd = new SqlCommand("SELECT * FROM Category WHERE Id=@searchterm or Name=@searchterm", con);
-                    cmd.Parameters.AddWithValue("searchterm", searTerm);
-                    SqlDataAdapter da = new SqlDataAdapter();
-                    da.SelectCommand = cmd;
-                    DataTable dt = new DataTable();
-                    dt.Clear();
-                    da.Fill(dt);
-                    categoryDataGridView.DataSource = dt;
-                    ((DataGridViewImageColumn)categoryDataGridView.Columns[1]).ImageLayout = DataGridViewImageCellLayout.Stretch;
+                    try {
+                        int sercht = Convert.ToInt32(searTerm);
+                        cmd = new SqlCommand("SELECT * FROM Category WHERE ID=@searchterm", con);
+                        cmd.Parameters.AddWithValue("searchterm", sercht);
+                        SqlDataAdapter da = new SqlDataAdapter();
+                        da.SelectCommand = cmd;
+                        DataTable dt = new DataTable();
+                        dt.Clear();
+                        da.Fill(dt);
+                        categoryDataGridView.DataSource = dt;
+                        ((DataGridViewImageColumn)categoryDataGridView.Columns[1]).ImageLayout = DataGridViewImageCellLayout.Stretch;
+                    }
+                    catch (Exception) {
+
+                        cmd = new SqlCommand("SELECT * FROM Category WHERE Name=@searchterm", con);
+                        cmd.Parameters.AddWithValue("searchterm", searTerm);
+                        SqlDataAdapter da = new SqlDataAdapter();
+                        da.SelectCommand = cmd;
+                        DataTable dt = new DataTable();
+                        dt.Clear();
+                        da.Fill(dt);
+                        categoryDataGridView.DataSource = dt;
+                        ((DataGridViewImageColumn)categoryDataGridView.Columns[1]).ImageLayout = DataGridViewImageCellLayout.Stretch;
+                    
+                    }
+
 
                 }
                 catch (Exception ex)
@@ -174,6 +193,7 @@ namespace FreshGro
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("Data Updated Successfuly", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     load_data();
+                    AdminItems.instance.LoadData();
                     clearForm();
                     con.Close();
                 }
@@ -226,6 +246,7 @@ namespace FreshGro
                         con.Open();
                         cmd.ExecuteNonQuery();
                         load_data();
+                        AdminItems.instance.LoadData();
                         con.Close();
                     }
                 

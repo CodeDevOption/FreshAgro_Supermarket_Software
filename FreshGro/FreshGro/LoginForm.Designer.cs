@@ -53,6 +53,7 @@
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.userna = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -133,6 +134,7 @@
             this.loginType.Text = null;
             this.loginType.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.loginType.TextLeftMargin = 5;
+            this.loginType.SelectedIndexChanged += new System.EventHandler(this.loginType_SelectedIndexChanged);
             // 
             // username
             // 
@@ -565,6 +567,18 @@
             this.label2.TabIndex = 39;
             this.label2.Text = "Password";
             // 
+            // userna
+            // 
+            this.userna.AutoSize = true;
+            this.userna.BackColor = System.Drawing.Color.Transparent;
+            this.userna.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userna.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(120)))), ((int)(((byte)(105)))));
+            this.userna.Location = new System.Drawing.Point(111, 62);
+            this.userna.Name = "userna";
+            this.userna.Size = new System.Drawing.Size(64, 14);
+            this.userna.TabIndex = 39;
+            this.userna.Text = "Username";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -572,6 +586,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(214)))), ((int)(((byte)(159)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(469, 278);
+            this.Controls.Add(this.userna);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.bunifuButton2);
@@ -610,5 +625,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label userna;
     }
 }

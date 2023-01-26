@@ -24,7 +24,7 @@ namespace FreshGro
 
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -34,6 +34,15 @@ namespace FreshGro
             }
 
             loginType.SelectedIndex = 0;
+           
+            if (loginType.SelectedIndex == 0)
+            {
+                userna.Text = "Username";
+            }
+            else
+            {
+                userna.Text = "NIC";
+            }
         }
 
         private void bunifuCheckBox1_CheckedChanged(object sender, Bunifu.UI.WinForms.BunifuCheckBox.CheckedChangedEventArgs e)
@@ -83,16 +92,13 @@ namespace FreshGro
 
 
 
-
-
-
                 }
                 else {
 
                     try
                     {
-                        cmd = new SqlCommand("SELECT COUNT(*) FROM Cashier WHERE Username=@username AND Password=@password", con);
-                        cmd.Parameters.AddWithValue("username", username.Text);
+                        cmd = new SqlCommand("SELECT COUNT(*) FROM Cashier WHERE NIC=@nic AND Password=@password", con);
+                        cmd.Parameters.AddWithValue("nic", username.Text);
                         cmd.Parameters.AddWithValue("password", password.Text);
                         con.Open();
                         SqlDataAdapter sda = new SqlDataAdapter();
@@ -102,6 +108,8 @@ namespace FreshGro
                         if (dt.Rows[0][0].ToString() == "1")
                         {
                             CashierForm cashf = new CashierForm();
+                            Program.User = username.Text;
+                            Program.casNic = username.Text;
                             cashf.Show();
                             this.Hide();
 
@@ -120,6 +128,17 @@ namespace FreshGro
                         MessageBox.Show(ex.Message, "Alert", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+        }
+
+        private void loginType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (loginType.SelectedIndex == 0)
+            {
+                userna.Text = "Username";
+            }
+            else {
+                userna.Text = "NIC";
             }
         }
 

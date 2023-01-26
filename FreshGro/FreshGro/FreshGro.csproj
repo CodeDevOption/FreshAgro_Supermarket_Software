@@ -83,6 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddItemsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddItemsForm.Designer.cs">
+      <DependentUpon>AddItemsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminCashiers.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,6 +100,12 @@
     </Compile>
     <Compile Include="AdminCategories.Designer.cs">
       <DependentUpon>AdminCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminSupplier.Designer.cs">
+      <DependentUpon>AdminSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Customers.cs">
       <SubType>UserControl</SubType>
@@ -138,6 +150,12 @@
       <DependentUpon>CashierHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="EditItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditItems.Designer.cs">
+      <DependentUpon>EditItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,11 +188,17 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddItemsForm.resx">
+      <DependentUpon>AddItemsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminCashiers.resx">
       <DependentUpon>AdminCashiers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminCategories.resx">
       <DependentUpon>AdminCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSupplier.resx">
+      <DependentUpon>AdminSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CashierHome.resx">
       <DependentUpon>CashierHome.cs</DependentUpon>
@@ -196,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CashierForm.resx">
       <DependentUpon>CashierForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditItems.resx">
+      <DependentUpon>EditItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ItemCard.resx">
       <DependentUpon>ItemCard.cs</DependentUpon>

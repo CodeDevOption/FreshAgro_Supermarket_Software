@@ -50,46 +50,46 @@ namespace FreshGro
 
                 }
                 else {
-                
-                 try{
-                    int phoneNo = Convert.ToInt32(pNo);
-                    cmd = new SqlCommand("INSERT INTO Cashier (NIC,Image,Name,Email,Username,Password,PhoneNo,Address,DateOfHire) VALUES (@nic,@image,@name,@email,@username,@password,@phoneno,@address,@date)",con);
 
-                    cmd.Parameters.AddWithValue("nic", nic);                    
-                     //memory Streame
-                     MemoryStream mstr = new MemoryStream();
-                     cashierProImg.Image.Save(mstr,cashierProImg.Image.RawFormat);
-                     cmd.Parameters.AddWithValue("image",mstr.ToArray());
-                     cmd.Parameters.AddWithValue("name", name);
-                     cmd.Parameters.AddWithValue("email", email);
-                     cmd.Parameters.AddWithValue("username", username);
-                     cmd.Parameters.AddWithValue("password", password);
-                     cmd.Parameters.AddWithValue("phoneno", phoneNo);
-                     cmd.Parameters.AddWithValue("address", address);
-                     cmd.Parameters.AddWithValue("date",cashDateOfHire.Value.Date);
+                    try
+                    {
+                        int phoneNo = Convert.ToInt32(pNo);
+                        cmd = new SqlCommand("INSERT INTO Cashier (NIC,Image,Name,Email,Username,Password,PhoneNo,Address,DateOfHire) VALUES (@nic,@image,@name,@email,@username,@password,@phoneno,@address,@date)", con);
 
-                     con.Open();
-                     cmd.ExecuteNonQuery();
-                     MessageBox.Show("Data Inserted Successfuly", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                     clearForm();
-                     load_data();
-                     con.Close();
+                        cmd.Parameters.AddWithValue("nic", nic);
+                        //memory Streame
+                        MemoryStream mstr = new MemoryStream();
+                        cashierProImg.Image.Save(mstr, cashierProImg.Image.RawFormat);
+                        cmd.Parameters.AddWithValue("image", mstr.ToArray());
+                        cmd.Parameters.AddWithValue("name", name);
+                        cmd.Parameters.AddWithValue("email", email);
+                        cmd.Parameters.AddWithValue("username", username);
+                        cmd.Parameters.AddWithValue("password", password);
+                        cmd.Parameters.AddWithValue("phoneno", phoneNo);
+                        cmd.Parameters.AddWithValue("address", address);
+                        cmd.Parameters.AddWithValue("date", cashDateOfHire.Value.Date);
 
-                 }catch(Exception ex){
-                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 }
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Data Inserted Successfuly", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clearForm();
+                        load_data();
+                        con.Close();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        con.Close();
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
                 }
 
             }catch(Exception ex){
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine();
-                Console.ReadKey();
-            
             }
 
-
         }
-
 
         private void clearForm() {
             cashNic.Text = "";
@@ -127,6 +127,7 @@ namespace FreshGro
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);            
                 }
             }
             else {
@@ -146,6 +147,7 @@ namespace FreshGro
                 }
                 catch (Exception ex)
                 {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);            
                 }
             }
 
@@ -160,7 +162,7 @@ namespace FreshGro
         {
             try
             {
-
+                niclabel.Text = cashDataGrid.CurrentRow.Cells[0].Value.ToString();
                 cashNic.Text = cashDataGrid.CurrentRow.Cells[0].Value.ToString();
                 MemoryStream ms = new MemoryStream((byte[])cashDataGrid.CurrentRow.Cells[1].Value);
                 cashierProImg.Image = Image.FromStream(ms);
@@ -176,8 +178,6 @@ namespace FreshGro
             catch (Exception ex) {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);                                    
             }
-
-
         }
 
         private void siticoneButton3_Click(object sender, EventArgs e)
@@ -206,9 +206,11 @@ namespace FreshGro
                     try
                     {
                         int phoneNo = Convert.ToInt32(pNo);
-                        cmd = new SqlCommand("UPDATE Cashier SET NIC=@nic, Image=@image, Name=@name, Email=@email, Username=@username, Password=@password, PhoneNo=@phoneno, Address=@address, DateOfHire=@date  WHERE NIC=@nic", con);
+                        cmd = new SqlCommand("UPDATE Cashier SET NIC=@nic, Image=@image, Name=@name, Email=@email, Username=@username, Password=@password, PhoneNo=@phoneno, Address=@address, DateOfHire=@date  WHERE NIC=@niclab", con);
 
                         cmd.Parameters.AddWithValue("nic", nic);
+                        cmd.Parameters.AddWithValue("niclab", niclabel.Text);
+
                         //memory Streame
                         MemoryStream mstr = new MemoryStream();
                         cashierProImg.Image.Save(mstr, cashierProImg.Image.RawFormat);
@@ -225,22 +227,25 @@ namespace FreshGro
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Data Updated Successfuly", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         load_data();
-                        con.Close();
+
 
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
                 }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Console.WriteLine();
-                Console.ReadKey();
 
+            }
+            finally
+            {
+                con.Close();
             }
         }
 
@@ -263,7 +268,8 @@ namespace FreshGro
                     MessageBox.Show("Please Select Record Before Deleting", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
-                else {
+                else
+                {
 
                     DialogResult result = MessageBox.Show("Do you want to Delete this record?", "Alert", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
@@ -273,14 +279,19 @@ namespace FreshGro
                         con.Open();
                         cmd.ExecuteNonQuery();
                         load_data();
-                        con.Close();
+                        clearForm();
+
                     }
-                
+
                 }
 
             }
-            catch (Exception ex) {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);            
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally {
+                con.Close();
             }
         }
 

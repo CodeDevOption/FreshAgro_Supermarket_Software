@@ -90,6 +90,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.cashClearBtn = new Siticone.UI.WinForms.SiticoneButton();
+            this.niclabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cashDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cashierProImg)).BeginInit();
             this.SuspendLayout();
@@ -996,10 +997,20 @@
             this.cashClearBtn.Text = "Clear";
             this.cashClearBtn.Click += new System.EventHandler(this.cashClearBtn_Click);
             // 
+            // niclabel
+            // 
+            this.niclabel.AutoSize = true;
+            this.niclabel.Location = new System.Drawing.Point(20, 38);
+            this.niclabel.Name = "niclabel";
+            this.niclabel.Size = new System.Drawing.Size(0, 13);
+            this.niclabel.TabIndex = 61;
+            this.niclabel.Visible = false;
+            // 
             // AdminCashiers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.niclabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
@@ -1063,6 +1074,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Siticone.UI.WinForms.SiticoneButton cashClearBtn;
+        private System.Windows.Forms.Label niclabel;
 
     }
 }

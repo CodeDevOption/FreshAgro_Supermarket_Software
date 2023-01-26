@@ -45,8 +45,8 @@
             this.profileName = new System.Windows.Forms.Label();
             this.bunifuPictureBox2 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.cashierHome1 = new FreshGro.CashierHome();
-            this.customers1 = new FreshGro.Customers();
             this.registerSale1 = new FreshGro.RegisterSale();
+            this.customers1 = new FreshGro.Customers();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -250,9 +250,9 @@
             this.profileName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(109)))), ((int)(((byte)(95)))));
             this.profileName.Location = new System.Drawing.Point(84, 31);
             this.profileName.Name = "profileName";
-            this.profileName.Size = new System.Drawing.Size(124, 13);
+            this.profileName.Size = new System.Drawing.Size(57, 13);
             this.profileName.TabIndex = 1;
-            this.profileName.Text = "Sadaruwan (Cashier)";
+            this.profileName.Text = "(Cashier)";
             // 
             // bunifuPictureBox2
             // 
@@ -278,14 +278,6 @@
             this.cashierHome1.Size = new System.Drawing.Size(1043, 629);
             this.cashierHome1.TabIndex = 6;
             // 
-            // customers1
-            // 
-            this.customers1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customers1.Location = new System.Drawing.Point(0, 0);
-            this.customers1.Name = "customers1";
-            this.customers1.Size = new System.Drawing.Size(1275, 705);
-            this.customers1.TabIndex = 7;
-            // 
             // registerSale1
             // 
             this.registerSale1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -294,6 +286,14 @@
             this.registerSale1.Size = new System.Drawing.Size(1275, 705);
             this.registerSale1.TabIndex = 8;
             this.registerSale1.Load += new System.EventHandler(this.registerSale1_Load);
+            // 
+            // customers1
+            // 
+            this.customers1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customers1.Location = new System.Drawing.Point(0, 0);
+            this.customers1.Name = "customers1";
+            this.customers1.Size = new System.Drawing.Size(1275, 705);
+            this.customers1.TabIndex = 7;
             // 
             // CashierForm
             // 
@@ -310,6 +310,7 @@
             this.Name = "CashierForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CashierForm";
+            this.Load += new System.EventHandler(this.CashierForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
